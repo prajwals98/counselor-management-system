@@ -1,0 +1,317 @@
+else
+{
+	$query1 = mysql_query("select * from login where usn='$staff_fullname'")or die(mysql_error());
+								$row1 = mysql_fetch_array($query1);
+								$fullname=$row1['firstname']." ".$row1['lastname'];
+	?>
+	
+	<div class="panel panel-default">
+			<div class="panel-heading">Personal Information</div>
+			<div class="panel-body">
+			<div class="row">
+			<div class="col-lg-12">
+			<div class="form-group">
+		    <div class="col-lg-2">
+			<label>Full Name<span id="" style="font-size:11px;color:red"> </span>	</label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="fname" required="required" value="<?php echo $fullname; ?>" pattern="[A-Za-z]+$" disabled>
+			</div>
+			 <div class="col-lg-2">
+			<label>USN (1BMXXMCAXX) <span id="" style="font-size:11px;color:red"> </span></label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input  class="form-control" name="USN" required="required" value="<?php echo $staff_fullname; ?>" pattern="1RV[0-9][0-9]IS[0-9][0-9][0-9]" disabled>
+			</div>
+			</div>	
+			<br><br>
+								
+		<div class="form-group">
+		    <div class="col-lg-2">
+			<label>DOB (YY-MM-DD) <span id="" style="font-size:11px;color:red">  </span></label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="dob" required="required" pattern="[1-2][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]">
+			</div>
+			 <div class="col-lg-2">
+			<label>Blood Group</label>
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="bg">
+			</div>	
+			<br /><br /><br />		
+		     <div class="form-group">
+			 <div class="col-lg-2">
+			<label>Mobile No <span id="" style="font-size:11px;color:red"> </span>	</label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="mobileno" required="required" pattern="\+?\d[\d -]{8}\d">
+			</div>
+			 <div class="col-lg-2">
+			<label>E-mail <span id="" style="font-size:11px;color:red"> </span></label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="email" required="required"  pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+			</div>
+			
+			 
+			</div>	
+			<br><br>
+					
+		     <div class="form-group">
+			 <div class="col-lg-2">
+			<label>counselor</label>
+			
+			</div>
+			<div class="col-lg-4">
+			
+			</div> 
+			
+			
+			
+			  <br /><br /><br />
+			
+			
+			
+			
+			
+			
+			
+			 <div class="col-lg-2">
+			<label>Father Name <span id="" style="font-size:11px;color:red" > </span></label>
+			
+			</div>
+			<div class="col-lg-4" style="color:red">
+			<input class="form-control" name="fathername" required="required" pattern="[A-Za-z]+$">
+			</div>
+			 <div class="col-lg-2">
+			<label>Father's Occupation <span id="" style="font-size:11px;color:red"> </span></label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="fatherocc" required="required" pattern="[A-Za-z]+$">
+			</div>
+			</div>	
+			<br><br>
+			
+			
+					
+		     <div class="form-group">
+			 <div class="col-lg-2">
+			<label>Father's Contact <span id="" style="font-size:11px;color:red"> </span></label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="fmobileno" required="required" pattern="\+?\d[\d -]{8}\d">
+			</div>
+			 <div class="col-lg-2">
+			<label>Father's Occupational Address</label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="fatheroccadd">
+			</div>
+			
+			</div>	
+			<br><br>
+			</div>	
+			<br><br>
+		</div>
+      	</div>
+		</div>
+		
+		
+		
+		<div class="row">
+			<div class="col-lg-12">
+			<div class="panel panel-default">
+			<div class="panel-heading">Personal Information</div>
+			<div class="panel-body">
+			<div class="row">
+			<div class="col-lg-12">
+			<div class="form-group">
+		    <div class="col-lg-2">
+			<label>Mother's Name <span id="" style="font-size:11px;color:red"> </span></label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="mothername" required="required" pattern="[A-Za-z]+$">
+			</div>
+			 <div class="col-lg-2">
+			<label>Mother's Occupation</label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="motherocc" pattern="[A-Za-z]+$">
+			</div>
+			</div>	
+			<br><br>
+								
+		<div class="form-group">
+		    <div class="col-lg-2">
+			<label>Mother's Contact</label>
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="mmobileno" pattern="\+?\d[\d -]{8}\d">
+			</div>
+			 <div class="col-lg-2">
+			<label>Mother's Occupational Address</label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="motheroccadd">
+			</div>
+			
+			</div>	
+			
+	<br><br><br><br>		
+		     <div class="form-group">
+			 <div class="col-lg-2">
+			<label>Local Guardian's Name</label>
+			
+			</div>
+			<div class="col-lg-4">
+         <input class="form-control" name="guarname" pattern="[A-Za-z]+$">
+			</div>
+			 <div class="col-lg-2">
+			<label>Local Guardian's Contact</label>
+			
+			</div>
+			<div class="col-lg-4">
+			<input class="form-control" name="guarmobileno" pattern="\+?\d[\d -]{8}\d">
+			</div>
+			<br><br><br><br>
+			<div class="col-lg-2">
+			<label>Accommodation</label>
+			
+			</div>
+			<div class="col-lg-4">
+			<select id="accommadation" name="accommadation">                     
+<option value="0">--Select Accommodation--</option>
+<option value="Day Scholar">Day Scholar</option>
+<option value="Hostelite">Hostelite</option>
+<option value="Paying Guest">Paying Guest</option>
+</select>
+			</div>
+			<br><br><br>
+			</div>	
+			<div class="row">
+			<div class="col-lg-12">
+			<div class="panel panel-default">
+			<div class="panel-heading">Academic Informations</div>
+		
+			<div class="row">
+			
+			<div class="col-lg-12">
+			<div class="form-group">
+		    <div class="panel panel-default">
+            <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+										 <div class="col-lg-6">
+			 <th>&nbsp;&nbsp;&nbsp;&nbsp;Qualifying Examination</th>
+			</div>
+                                         <div class="col-lg-6">
+			<th>&nbsp;&nbsp;&nbsp;&nbsp;Board</label></th>
+			</div>   
+            <div class="col-lg-6">
+			<th>&nbsp;&nbsp;&nbsp;% of marks obtained</th>
+			</div>   
+              <div class="col-lg-6">
+			 <th>&nbsp;&nbsp;&nbsp;&nbsp;Year Of Passing</th>
+			</div>                                 
+            </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr> 
+                  <td><div class="col-lg-6">
+				  Class X
+				  </div></td>
+                  <td><div class="col-lg-6">
+			<input class="form-control" name="Xboard" required="required" pattern="[A-Za-z]+$">
+			</div></td>
+            <td><div class="col-lg-6">
+			<input class="form-control" name="Xmarks" required="required" pattern="[0-9][0-9]">
+			</div></td>
+			<td><div class="col-lg-6">
+			<input class="form-control" name="Xyear" required="required" pattern="[1-2][0-9][0-9][0-9]">
+			</div></td>
+                  </tr>
+
+          <tr> 
+                  <td><div class="col-lg-6">
+				  Class XII
+				  </div></td>
+                  <td><div class="col-lg-6">
+			<input class="form-control" name="XIIboard" required="required" pattern="[A-Za-z]+$">
+			</div></td>
+            <td><div class="col-lg-6">
+			<input class="form-control" name="XIImarks" required="required" pattern="[0-9][0-9]">
+			</div></td>
+			<td><div class="col-lg-6">
+			<input class="form-control" name="XIIyear" required="required" pattern="[1-2][0-9][0-9][0-9]">
+			</div></td>
+                  </tr>
+
+ <tr> 
+                  <td><div class="col-lg-6">
+				  Degree Specialization
+				  </div></td>
+                  <td><div class="col-lg-6">
+			<input class="form-control" name="degreeboard" required="required" pattern="[A-Za-z]+$">
+			</div></td>
+            <td><div class="col-lg-6">
+			<input class="form-control" name="degreemarks" required="required" pattern="[0-9][0-9]">
+			</div></td>
+			<td><div class="col-lg-6">
+			<input class="form-control" name="degreeyear" required="required" pattern="[1-2][0-9][0-9][0-9]">
+			</div></td>
+                  </tr>
+				  
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+	
+				
+			</div>	
+			<br><br>
+
+	
+
+		  
+	
+			<br><br>
+			
+			
+			</div>	
+			<br><br>
+		</div>
+      	</div>
+		</div>					
+       
+          </div>	
+					     
+						
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+                    </div>
+					<?php
+}
+?>

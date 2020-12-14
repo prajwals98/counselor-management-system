@@ -1,0 +1,211 @@
+mysql_query("insert into year1 (fullname,usn,DOB,email,Mobileno,address,counselor,bloodgroup,fathername,foccupation,faddress,fcontact,mothername,moccupation,maddress,mcontact,localname,lcontact,accommodation,boardx,xmarks,yopx,boardxii,xiimarks,yopxii,degree,degreemarks,yopdegree,yr) 
+values('$firstname','$usn','$dob','$email','$mobile','$fatheroccadd','$counselor','$bloodgroup','$fathername','$fatherocc','$fatheroccadd','$fmobileno','$mothername','$motherocc','$motheroccadd','$mmobileno','$guarname','$guarmobileno','$accommadation','$xboard','$xmarks','$xyear','$xiiboard','$xiimarks','$xiiyear','$degreeboard','$degreemarks','$degreeyear','$yr')")or die(mysql_error());
+
+
+
+
+
+
+<?php $get_id = $_GET['del']; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mysql_query("update year1 set fullname='$firstname',DOB='$dob',email='$email',Mobileno='$mobile',address='$fatheroccadd',counselor='$counselor',bloodgroup='$bloodgroup',fathername='$fathername',foccupation='$fatherocc',faddress='$fatheroccadd',fcontact='$fmobileno',mothername='$mothername',moccupation='$motherocc',maddress='$motheroccadd',mcontact='$mmobileno',localname='$guarname',lcontact='$guarmobileno',accommodation='$accommadation',boardx='$xboard',xmarks='$xmarks',yopx='$xyear',boardxii='$xiiboard',xiimarks='$xiimarks',yopxii='$xiiyear',degree='$degreeboard',degreemarks='$degreemarks',yopdegree='$degreemarks',yr='$yr' where usn = '$get_id'") or die(mysql_error());
+
+
+
+
+
+
+
+
+
+
+
+				<?php
+													$user_query = mysql_query("select * from login where login_id = '$session_id'")or die(mysql_error());
+													while($row = mysql_fetch_array($user_query)){
+													$id = $row['login_id'];
+													?>
+													
+													<?php }?>
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													SELECT * FROM year1 WHERE usn='$staff_fullname'
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+																<?php
+	if (isset($_POST['save']))
+{		
+$firstname 	= 	$_POST['fname'];
+$usn3 = 	$_POST['USN'];
+$dob = 	$_POST['dob'];
+$bloodgroup = 	$_POST['bg'];
+$mobile = $_POST['mobileno'];
+$email =	 	$_POST['email'];
+$counselor= 	$_POST['counselor'];
+$fathername=	 	$_POST['fathername'];
+$fatherocc = 		$_POST['fatherocc'];
+$fmobileno = 	$_POST['fmobileno'];
+$fatheroccadd = 		$_POST['fatheroccadd'];
+$mothername= 	$_POST['mothername'];
+$motherocc= 	$_POST['motherocc'];
+$mmobileno= 	$_POST['mmobileno'];
+$motheroccadd= 	$_POST['motheroccadd'];
+$guarname= 	$_POST['guarname'];
+$guarmobileno= 	$_POST['guarmobileno'];
+$accommadation= 	$_POST['accommadation'];
+$xboard= 	$_POST['Xboard'];
+$xmarks= 	$_POST['Xmarks'];
+$xyear= 	$_POST['Xyear'];
+$xiiboard= 	$_POST['XIIboard'];
+$xiimarks= 	$_POST['XIImarks'];
+$xiiyear= 	$_POST['XIIyear'];
+$degreeboard= 	$_POST['degreeboard'];
+$degreemarks= 	$_POST['degreemarks'];
+$degreeyear= 	$_POST['degreeyear'];
+$yr			= $_POST['yr'];
+
+	
+mysql_query("update year1 set fullname='$firstname',DOB='$dob',email='$email',Mobileno='$mobile',address='$fatheroccadd',counselor='$counselor',bloodgroup='$bloodgroup',fathername='$fathername',foccupation='$fatherocc',faddress='$fatheroccadd',fcontact='$fmobileno',mothername='$mothername',moccupation='$motherocc',maddress='$motheroccadd',mcontact='$mmobileno',localname='$guarname',lcontact='$guarmobileno',accommodation='$accommadation',boardx='$xboard',xmarks='$xmarks',yopx='$xyear',boardxii='$xiiboard',xiimarks='$xiimarks',yopxii='$xiiyear',degree='$degreeboard',degreemarks='$degreemarks',yopdegree='$degreeyear',yr='$yr' where usn = '$usn3'") or die(mysql_error());
+?>
+<script>
+window.location = "dashboard_staff.php";
+alert("Details Updated");
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$result = mysql_query("SELECT * FROM year1 WHERE usn ='$staff_fullname' ");	
+
+if( mysql_num_rows($result) > 0)
+	{
+		mysql_query("UPDATE year1 SET fullname='$firstname',DOB='$dob',email='$email',Mobileno='$mobile',address='$fatheroccadd',counselor='$counselor',bloodgroup='$bloodgroup',fathername='$fathername',foccupation='$fatherocc',faddress='$fatheroccadd',fcontact='$fmobileno',mothername='$mothername',moccupation='$motherocc',maddress='$motheroccadd',mcontact='$mmobileno',localname='$guarname',lcontact='$guarmobileno',accommodation='$accommadation',boardx='$xboard',xmarks='$xmarks',yopx='$xyear',boardxii='$xiiboard',xiimarks='$xiimarks',yopxii='$xiiyear',degree='$degreeboard',degreemarks='$degreemarks',yopdegree='$degreemarks',yr='$yr' WHERE usn = '$get_id'") or die(mysql_error());
+
+	}
+	else
+	{
+	
+mysql_query ("INSERT INTO year1 (fullname,usn,DOB,bloodgroup,Mobileno,email,counselor,fathername,foccupation,fcontact,faddress,mothername,moccupation,mcontact,maddress,localname,lcontact,accommodation,boardx,xmarks,yopx,boardxii,xiimarks,yopxii,degree,degreemarks,yopdegree,yr) VALUES ('$name','','$dob','$bloodgroup','$mobile','$email','$counselor','$fathername','$fatherocc','$fmobileno','$fatheroccadd','$mothername','$motherocc','$mmobileno','$motheroccadd','$guarname','$guarmobileno','$accommadation','$xboard','$xmarks','$xyear','$xiiboard','$xiimarks','$xiiyear','$degreeboard','$degreemarks','$degreeyear','$yr')")  or die(mysql_error());
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	(fullname,usn,DOB,email,Mobileno,address,counselor,bloodgroup,fathername,foccupation,faddress,fcontact,mothername,moccupation,maddress,mcontact,localname,lcontact,accommodation,boardx,xmarks,yopx,boardxii,xiimarks,yopxii,degree,degreemarks,yopdegree,yr) 
+	
+	
+	
+	
+	
+	
+	
+	$query = mysql_query("select * from year1 where  usn = '$staff_fullname' ");
+$count = mysql_num_rows($query);
+if ($count > 0)
+{
+	$query1 = "UPDATE year1 SET fullname='$fullname',usn='$staff_fullname',DOB='$dob',email='$email',Mobileno='$mobile',address='$fatheroccadd',counselor='$counselor',bloodgroup='$bloodgroup',fathername='$fathername',foccupation='$fatherocc',faddress='$fatheroccadd',fcontact='$fmobileno',mothername='$mothername',moccupation='$motherocc',maddress='$motheroccadd',mcontact='$mmobileno',localname='$guarname',lcontact='$guarmobileno',accommodation='$accommadation',boardx='$xboard',xmarks='$xmarks',yopx='$xyear',boardxii='$xiiboard',xiimarks='$xiimarks',yopxii='$xiiyear',degree='$degreeboard',degreemarks='$degreemarks',yopdegree='$degreeyear',yr='$yr' WHERE usn = '$_GET[USN]'";
+	mysql_query($query1);
+}
+	
+	
+	
+$query="INSERT INTO year1 VALUES('$fullname','$staff_fullname','$dob','$email','$mobile','$fatheroccadd','$counselor','$bloodgroup','$fathername','$fatherocc','$fatheroccadd','$fmobileno','$mothername','$motherocc','$motheroccadd','$mmobileno','$guarname','$guarmobileno','$accommadation','$xboard','$xmarks','$xyear','$xiiboard','$xiimarks','$xiiyear','$degreeboard','$degreemarks','$degreeyear','$yr')";
+
+mysql_query($query);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+ mysql_query("UPDATE year1 SET fullname = '' , usn = '' , DOB = '$dob' , email = '$email' , Mobileno = '$mobile' , address = '$fatheroccadd' , counselor='$counselor', bloodgroup='$bloodgroup', fathername='$fathername', foccupation='$fatherocc' , faddress = '$fatheroccadd' , fcontact='$fmobileno', mothername = '$mothername' , moccupation = '$motherocc' , maddress = '$motheroccadd' , mcontact = '$mmobileno' , localname='$guarname' , lcontact='$guarmobileno' , accommodation = '$accommadation' , boardx = '$xboard' , xmarks='$xmarks', yopx='$xyear' , boardxii = '$xiiboard' , xiimarks = '$xiimarks' , yopxii = '$xiiyear' , degree='$degreeboard', degreemarks = '$degreemarks' , yopdegree='$degreeyear', yr='$yr' WHERE year1.usn = '$usn'") or die(mysql_error());	
+	
+	
+	
+	
+	
+	<a href="viewyear1.php?cid=<?php echo $row['usn']; ?>">
+	
+	
+	<button name="save1" class="btn btn-info"  id="save1" data-placement="center" title="Click to Save"><i class="icon-plus-sign icon-large"> Save</i></button>
+	
+	
+	
+	mysql_query("update year1 set mothername = '$mothername' where usn = '$staff_fullname' ") or die(mysql_error());
